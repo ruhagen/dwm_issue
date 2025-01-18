@@ -900,7 +900,7 @@ drawstatusbar(Monitor *m, int bh, char* stext) {
 void
 drawbar(Monitor *m)
 {
-	int x, w, tw = 0, sw = 0;
+	int x, w, tw = 0;
 	int boxs = drw->fonts->h / 9;
 	int boxw = drw->fonts->h / 6 + 2;
 	unsigned int i, occ = 0, urg = 0;
@@ -908,7 +908,7 @@ drawbar(Monitor *m)
 
 	/* draw status first so it can be overdrawn by tags later */
     if (m == selmon || 1) { /* status is only drawn on selected monitor */
-        sw = m->ww - drawstatusbar(m, bh, stext) - 2 * sp - 10;
+//      sw = m->ww - drawstatusbar(m, bh, stext) - 2 * sp - 10;
         tw = m->ww - drawstatusbar(m, bh, stext) - 2 * sp - 10; // status2d fix
     }
 
